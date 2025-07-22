@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Bill</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #fceabb, #f8b500);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+        .btn-finish {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .btn-finish:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="bill-card text-center">
+        <h2 class="text-success mb-4">Bill Details</h2>
+        <p><strong>Customer Name:</strong> {{ customer_name }}</p>
+        <p><strong>Flavor:</strong> {{ flavor }}</p>
+        <p><strong>Quantity:</strong> {{ quantity }} scoop(s)</p>
+        <p><strong>Total Price:</strong> ₹{{ total_price }}</p>
+        <a href="/thankyou" class="btn btn-finish mt-4">Finish</a>
+    </div>
+</body>
+</html>
